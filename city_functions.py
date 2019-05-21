@@ -1,4 +1,9 @@
-def get_full_name(city, country):
+def get_full_name(city, country, population = 0):
     """Display city and country as a string"""
-    full_name = city + ", " + country
-    return full_name.title()
+    
+    if population:
+        full_name = city.title() + ", " + country.title() + " - population " + str(population)
+    else:
+        full_name = city.title() + ", " + country.title()
+
+    return full_name

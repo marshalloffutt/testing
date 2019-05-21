@@ -9,4 +9,9 @@ class CitiesTestCase(unittest.TestCase):
         full_name = get_full_name('london', 'england')
         self.assertEqual(full_name, 'London, England')
 
+    def test_city_country_and_population(self):
+        """Does 'London, England - population 8825000' work?"""
+        full_name = get_full_name('london', 'england', 8825000)
+        self.assertEqual(full_name, 'London, England - population 8825000')
+
 unittest.main()
